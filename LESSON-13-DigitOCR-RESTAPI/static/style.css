@@ -1,0 +1,41 @@
+
+body {
+    background-color: midnightblue;
+  }
+
+h1 {
+    color: rgb(233, 13, 13);
+    margin-left: 20px;
+    text-align: center;
+    border:30px solid green;
+    padding : 25px 25px 25px 25px;
+}
+
+p {
+    color: white;
+    margin : 8px 8px;
+}
+
+form {
+    color: white
+}
+
+input[type=file] {
+    background-color: rgb(163, 76, 175);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 8px 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: rgb(53, 189, 121);
+    color: white;
+    padding: 32px 64px;
+    text-decoration: none;
+    margin: 32px 32px;
+    cursor: pointer;
+  }

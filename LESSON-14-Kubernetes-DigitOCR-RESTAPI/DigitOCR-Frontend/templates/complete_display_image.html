@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#007DB8">
+
+<h1>I think it is a <b>{{ocr_output}}</b></h1>
+<i>by inference engin ver: {{ocr_ver}}</i>
+<hr>
+The image uploaded is <br>
+<img src=" {{url_for('send_image', filename=image_name)}}" width="200">
+</body>
+</html>

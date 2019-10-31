@@ -1,0 +1,5 @@
+flask==1.1.1
+requests==2.22.0
+#numpy==1.17.2
+#scikit-image==0.15.0
+#tensorflow==1.14.0

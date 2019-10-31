@@ -1,0 +1,22 @@
+/* My CSS style sheet
+Dev: Man Wei
+*/
+.block1 {
+    background-color: rgb(47, 166, 187);
+    text-align: center;
+    padding : 25px 25px 25px 25px
+  }
+  
+h1 {
+    color: rgb(128, 0, 75);
+    margin-left: 20px;
+    text-align: center;
+    border:30px solid green;
+    padding : 25px 25px 25px 25px
+}
+
+h2 {
+  color: navy;
+  margin-left: 20px;
+  text-align: center;
+}
