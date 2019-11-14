@@ -1,4 +1,6 @@
-# Fun with Dev Ops - Lee Man Wei
+# Fun with Dev Ops
+
+Lee Man Wei
 
 ---
 
