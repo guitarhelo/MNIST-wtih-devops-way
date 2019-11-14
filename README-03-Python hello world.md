@@ -1,4 +1,4 @@
-#  Python Programming
+# Python Programming
 
 ## Install Python
 
@@ -48,7 +48,7 @@ notice error msg
 
     >>> print ("wow... this is easy", c)
 
-A little more formats 
+A little more formats
 
     >>> print ('I think %n + %n is  %n' % (a, b, a+b))
 
@@ -102,7 +102,7 @@ See the beautiful highlighting?
 
 Note: If the highlighting doesn't work, VS Code would prompt you to install some components.  You may need to install python3 on the windows for some more features of the VS Code to work.
 
-# Recap
+## Recap
 
 You can create a Python program
 You can run it
