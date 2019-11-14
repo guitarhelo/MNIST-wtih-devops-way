@@ -1,3 +1,4 @@
+
 # Build your project in Docker
 
 ## Step 1
@@ -11,7 +12,6 @@ app.py is the main app
      If you just run app.py, the port is 4555
 
      In this case, we are going to deploy using a Apache web server
-
 
 ## Step 2.  Go through the Dockerfile
 
@@ -39,4 +39,3 @@ How Webserver interface with the Python code
 WSGI
 
 # Recap
-

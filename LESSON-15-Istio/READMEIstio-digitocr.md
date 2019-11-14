@@ -1,9 +1,10 @@
 # Deploy Containers with Istio
 
 The genreal steps to change a normal kubernetes .yaml file to work for istio
-1.  Modify the YAMAL files to tag version to each application
-2.  Create a destination rule yaml
-3.  Create virtual service that routes selectively
+
+1. Modify the YAMAL files to tag version to each application
+2. Create a destination rule yaml
+3. Create virtual service that routes selectively
 
 ## Step 1
 
@@ -28,7 +29,6 @@ If you get into the details using 'kubectl describe pods digitocr-...', you woul
         Image ID:      docker.io/istio/proxyv2@sha256:6a7d338b8da5a99574f0a78195da974d895ad6b65682660b1717c43e6b7559e6
         Port:          15090/TCP
         Host Port:     0/TCP
-
 
 At this stage, the deployment should be working as before.  The Istio sidecars are deployed automatically, but it doesn't affect the routing
 

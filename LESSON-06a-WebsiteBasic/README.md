@@ -1,4 +1,5 @@
-# Programming a simple webpage #
+
+# Programming a simple webpage
 
 ## Objective
 
@@ -12,16 +13,15 @@ What is a framework?
 
 You have two choices how to finish this module
 
-* Option 1 
+* Option 1
 
-    http://letmegooglethat.com/?q=python+flask+ubuntu+18.04
+    <http://letmegooglethat.com/?q=python+flask+ubuntu+18.04>
 
     Note : For simplicity, we can skip creation of python virtual environment
 
 * Option 2
 
     Follow steps below
-
 
 ### Step 1 - Create Virtual Envronment (Python)
 
@@ -35,15 +35,14 @@ Create directory 'les##'
     $ cd les06
 
 Create the virtual envrionment inside that directory
-    
+
     $ python3 -m venv venv-w
 
-Activate it by 
+Activate it by
 
     $ source venv-w/bin/activate
 
 Create a simple python program 'app.py' code and run it.  Just a recap so you know what you are doing
-
 
     # Example of simple python code
     a = 10
@@ -60,7 +59,6 @@ Install Flask, it is a Web Framwork for Python
 PIP/PIP3 is how python installs packages
 
 Note : Once virtual envrionment is active. You can use python and pip instead of python3/pip3
-
 
 ### Step 3
 
@@ -79,7 +77,6 @@ Write the first Flask app
 
     if __name__ == "__main__":
         app.run(host='0.0.0.0', port=4001, debug=True)
-
 
 Now run this code
 
@@ -129,7 +126,6 @@ Now in the shell
 
 Now observe which port is the web serving the web page
 
-
 Clear the envrieonmetal variable by
 
     $ unset PORT
@@ -141,14 +137,13 @@ Note :
 
 ### Step 4
 
-Now try to add another web page.  So that when you go http://xxx.xxx.xxx.xxx/hello, it would show something else
+Now try to add another web page.  So that when you go <http://xxx.xxx.xxx.xxx/hello,> it would show something else
 
 Add the following code (guess where to add it?)
 
     @app.route("/hello")
     def hello():
         return ("hello who?")
-
 
 How to take some inputs from the weblink?
 
@@ -161,7 +156,6 @@ Test it out
     http://xxx.xxx.xxx.xxx:4001/hello
 
     http://xxx.xxx.xxx.xxx:4001/hello/ManWei
-
 
 ## HTML, CSS etc (Make it beautiful)
 
@@ -176,9 +170,7 @@ Test it out
 
     from random import randint
 
-
 [CODE - add code section]
-
 
     @app.route("/quote/<string:name>/")
     def quote(name):
@@ -194,7 +186,6 @@ Test it out
 
         return render_template(
             'test.html',**locals())
-
 
 Now try it out.
 
@@ -223,7 +214,6 @@ Now refresh the web browser to see the effect
 **IMPORT **: Due to some browser caching the CSS file, if you edit the CSS file, need to force the brower to do a FULL RELOAD to see the effect (shift-F5 for Chrome)
 
 You can try to edit the /static/style.css to see you can change the output
-
 
 ## Recap
 

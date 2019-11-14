@@ -1,10 +1,12 @@
+
 # Kubernetes & Image Registry
 
 Objective :
+
 * To use a image repository
 * Deploy the image using Kubernetes
 
-    Fun Fact : Why K8s?    
+    Fun Fact : Why K8s?
 
     K u b e r n e t e s
 
@@ -29,9 +31,7 @@ Move the CLI for pks and kubectl to the right locations
     $ sudo chmod +x kubectl
     $ sudo chmod +x pks
 
-
-## Using the Registry 
-
+## Using the Registry
 
 docker has capability to connect to a registry.  Push and Pull docker images from it.  Default is dockerhub.
 
@@ -41,12 +41,12 @@ Some sites would use the public dockerhub for this purpose
 The registry each site would use is
 
 | Location  | Container Registory   |   Username      |  Password
-| --- | --- |  ---  |  --- | 
+| --- | --- |  ---  |  --- |
 | Beijing   |                       |
 | Shanghai  |                       |
 | Singapore | harbor.csc-dell.com   | trainee01        | ********** |
 |  Sydney   |                       |
-| Tokyo     | Dockerhub             |                   |   
+| Tokyo     | Dockerhub             |                   |
 
 ### Trainees using Private registry (Harbor) - Sgp, Shg, Bj,Syd
 
@@ -107,12 +107,12 @@ Now the image is still local.  To PUSH it to the remote repository, now
 
     $ sudo docker push username/training/digitocr:lmw1.0
 
-
 ## PKS/Kubernetes time
 
 ### Trainees using PKS (Sgp, Syd, Bj, Shg etc)
 
 #### Creating the Kubernetes cluster
+
 (this section should be skipped for trainee)
 
     pks login -a api.pks.csc-dell.com -u user2 -p P@ssw0rd -k
@@ -123,24 +123,23 @@ Now the image is still local.  To PUSH it to the remote repository, now
 
     pks cluster training
 
-To create a cluster 
+To create a cluster
 
     (DO NOT DO IT)
     pks create-cluster training --external-hostname training.pks.csc-dell.com --plan small
 
 Now access to the cluster
 
-
 #### Working with the K8s cluster
 
 Recap
+
 * Where is your kubectl?
 
 * Where is the K8s cluster?
 
 * Think client-server.  How to connect to the right cluster?
-    * https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-
+  * <https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/>
 
     $ pks get-credentials training
 
@@ -163,7 +162,6 @@ You need a config file to connect to the kubernetes
 Check that it works
 
     $ kubectl cluster-info
-
 
 ## Let's deploy
 
@@ -192,8 +190,9 @@ Look into the details of the pod
 #### Method 1
 
     $  kubectl expose deployment name-of-deployment --name=loadbalancer --port=80 --target-port=80 --type=LoadBalancer
-    
+
 Note:
+
 * --port =  the external port
 * --target-port =  the internal port facing the containers
 
@@ -201,9 +200,7 @@ Note:
 
     $ kubectl expose deployment/kubernetes-tutorial-deployment --type="NodePort" --port 80
 
-
 Now ready to point to container to test.  But what is the IP address and Port?
-
 
 What is the IP and PORT?
 
@@ -222,20 +219,18 @@ For reference
 
 IP of the PKS cluster (nodes)
 
-| Location  | IP   
+| Location  | IP
 | --- | --- |
 | Beijing   |                       |
 | Shanghai  |                       |
 | Singapore | 172.24.7.45  |
-|  Sydney   |                     
+|  Sydney   |
 | Tokyo     |
-
 
 # Recap
 
 * How many steps to do a deployment?
 * would the deployment be repeatable?
-
 
 ------------------
 
@@ -243,16 +238,15 @@ Please ignore information below
 Just some additional information
 
 Connecting to Multiple Client
-- use different contexts
-- Basically, there is a .kube/config file which contains all the information
-- Some commands to manage the context
 
+* use different contexts
+* Basically, there is a .kube/config file which contains all the information
+* Some commands to manage the context
 
     $ kubectl config current-context
     $ kubectl config get-contexts
     $ kubectl config use-context microk8s
     $ kubectl config use-context microk8s
-
 
 This is installing the public version of kubectl
 
@@ -262,11 +256,10 @@ This is installing the public version of kubectl
     sudo apt-get update
     sudo apt-get install -y kubectl
 
-
 How to extract IP/Ports for exposing service. Scripting
 
-#get service website and ports for cscnginx
-export NODE_PORT=$(kubectl get svc -n default cscnginx -o jsonpath='{.spec.ports[0].nodePort}')
-export NODE_IP=$(kubectl get no -o jsonpath="{.items[0].status.addresses[0].address}")
-export APP_URL=http://$NODE_IP:$NODE_PORT/
-echo $APP_URL 
+    #get service website and ports for cscnginx
+    export NODE_PORT=$(kubectl get svc -n default cscnginx -o jsonpath='{.spec.ports[0].nodePort}')
+    export NODE_IP=$(kubectl get no -o jsonpath="{.items[0].status.addresses[0].address}")
+    export APP_URL=http://$NODE_IP:$NODE_PORT/
+    echo $APP_URL 

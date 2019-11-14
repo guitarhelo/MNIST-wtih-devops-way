@@ -1,7 +1,9 @@
 # Using Web proxy in Ubuntu
 
 ## Method 1.  Using Environment variable
+
 ### Setting it
+
 #### Method 1.1
 
 In the command line.
@@ -12,17 +14,17 @@ In the command line.
 
     note: if special character are in the password, must replace with ascii code. Eg @ is replaced by %40 .  e.g. p@ssword -> p%40ssw0rd
 
-
-Ensure it is set by 
+Ensure it is set by
 
     $ env | grep proxy
 
-Clear it by 
+Clear it by
     $ unset http_proxy
 
 NOTE : If you use *sudo*, you must use *-E* option, eg 'sudo -E apt-get update' to force sudo to preserve the einvroment
 
 #### Method 1.2 (I haven't tried)
+
 Or set in /etc/environment
 
     http_proxy="http://<username>:<password>@<hostname>:<port>/"
@@ -44,15 +46,13 @@ In the python program, the parameters can be picked up by
 
     proxiesDict = urllib.request.getproxies()
 
-
 Example of code to make restapi call using proxyDict
 
     r = requests.get('http://example.org', proxies=urllib.request.getproxies())
 
-
 ----
 
-## Method 2 - Directly code it inside the Python program (not preferred).
+## Method 2 - Directly code it inside the Python program (not preferred)
 
 Since you need to set env variables for the Linux to work anyway.  Might as well use method one.  So this method here is more FYI, to understand the structure of the proxyDict.
 
@@ -71,5 +71,3 @@ Since you need to set env variables for the Linux to work anyway.  Might as well
     Example of code to make restapi call using proxyDict
 
         r = requests.get('http://example.org', proxies=proxyDict)
-
-        

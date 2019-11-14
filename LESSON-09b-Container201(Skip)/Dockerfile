@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER LMW <lmw@lmw.com>
+LABEL maintainer="LMW <lmw@lmw.com>""
 
 RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
