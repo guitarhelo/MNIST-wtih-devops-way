@@ -3,8 +3,7 @@
 ############################################################
 
 FROM library/ubuntu:18.04
-
-LABEL maintinaer="Kris.z"
+MAINTAINER Kris.z
 
 # RUN sed -i 's/archive.ubuntu.com/ap-southeast-1.ec2.archive.ubuntu.com/' /etc/apt/sources.list
 

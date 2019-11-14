@@ -1,9 +1,8 @@
-
 # Containers
 
 We would be using Docker containers  (that is like the defacto standard.  Not the only one)
 
-* Eg, PAS actually uses Garden container services.  Not Docker
+*  Eg, PAS actually uses Garden container services.  Not Docker
 
 ## Install Docker
 
@@ -11,7 +10,8 @@ Using the Ubuntu for this exercise
 
 To Install Docker on Ubuntu
 See instructions at
-<https://docs.docker.com/install/linux/docker-ce/ubuntu/>
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
 
 ### Step 1 - add the repository
 
@@ -41,7 +41,9 @@ See instructions at
 
     $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
+
 ### Step 3 - Verify installation
+
 
     $ docker --version
 
@@ -49,7 +51,8 @@ See version 19.03.2?
 
     $ docker run hello-world
 
-*NOTE:*
+
+*NOTE: *
 
 *PROXY SERVER*  If you need proxy server, please see READMEproxy.md
 
@@ -78,6 +81,7 @@ How to see the *help*?
 
     $ docker run --help | more
 
+
 [ACTION]
     Find the container running
 
@@ -86,13 +90,13 @@ How to see the *help*?
 
     $ docker container list
 
+
 Try to deploy more of the same container
 Do the same common again to deploy a second copy of the image
 
     $ docker run -P -d nginxdemos/hello
 
 Go access it.  And see that both web pages are alive
-
 * Notice the internal IP address
 * Notice the port number
 
@@ -102,6 +106,7 @@ What command do you think you can use to do that?
     * are you working with image or container?
     * so..... sudo docker container.......
     * how to get the help?
+
 
     $ sudo docker container list
     $ sudo docker container stop xxxxxxxx

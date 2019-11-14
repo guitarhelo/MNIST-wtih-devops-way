@@ -1,26 +1,24 @@
-
 # Passing Data to and From a Web service
 
-Target is to seperate the code to 2
-
+Target is to seperate the code to 2 
 * A frontend for the UI
 * A 'microservice' to do the interference
 
 Steps
-
 * Will explore different methods to pass data to web service
-  * Method 1: Using URL endpoints
-    * Develop web service to response
+     * Method 1: Using URL endpoints
+          * Develop web service to response
 
-  * Method 2: Using RESTAPI GET querries
-    * Read from a website (public weather data)
-    * Develop web service to response
-      * GET Querries
-      * POST JSON
+     * Method 2: Using RESTAPI GET querries
+          * Read from a website (public weather data)
+          * Develop web service to response
+               * GET Querries
+               * POST JSON
 
 ## Method 1 - Using URL to pass in the data
 
 Creat a new directory, and new app.py. Put in following code and try out.
+
 
      import os
      from flask import Flask    
@@ -56,7 +54,7 @@ This is one method of doing.
 
 Let's try to use RESTFUL methods  (RESTAPI)
 
-## Method 2 - RESTAPI
+## Method 2 - RESTAPI 
 
 ### Intro Exercise
 
@@ -72,6 +70,8 @@ Can you understand the response?
 
 ### Use Python to send the querry
   
+
+
     Try to write a simple restapi-get.py that reads the data. And just dump it out.  Note, it uses *requests* library.
 
 Hint: Just google for "python restapi example"
@@ -79,6 +79,7 @@ Hint: Just google for "python restapi example"
 Note : For those sites which uses proxy to access the web, google for examples that uses proxy.  If you have problem, read the <code>README-proxies.md</code> file here for help.
 
 ## Let's write a 'service', an app that responses to RESTAPI GET/PUT
+   
 
      https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
 
@@ -147,6 +148,8 @@ Sample JSON
           ,
           "sample_data": null
      }
+
+
 
 -----
 

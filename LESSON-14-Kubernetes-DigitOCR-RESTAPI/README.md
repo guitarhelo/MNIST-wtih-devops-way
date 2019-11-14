@@ -1,10 +1,8 @@
-
 # Kubernetes - Microservice
 
 The DigitOCR was was seperated two 2 parts, 1 frontend, 1 backend with RESTAPI
 
 Objective
-
 * Containerise the 2 apps
 * Deploy using kubernetes
 
@@ -12,7 +10,7 @@ Objective
 
 There are two directories one for the front-end, on the api microservice
 
-### API Microservice
+###  API Microservice
 
 Let's build based on Python container.  We will use the built-in flask server.
 
@@ -26,6 +24,8 @@ Let's build based on Python container.  We will use the built-in flask server.
      please name the container : harbor.csc-dell.com/library/digitocr-api-service:1.0
 
 Run the container, and use a web server/Insomnia to check it is working
+
+
 
 ### The frontend APP
 
@@ -49,7 +49,9 @@ What address to use to access the web service?  Our earlier code points to fixed
 
 ### the YAML files
 
-## Step 3 - Deploy
+
+## Step 3 - Deploy...
+
 
     kubectl apply -f deployment.yaml
 
@@ -58,11 +60,11 @@ What address to use to access the web service?  Our earlier code points to fixed
 DevOps - How to quickly test apps while managing risk.  
 
 If you want to learn the example by yourself  
-     <https://github.com/ContainerSolutions/k8s-deployment-strategies/tree/master/canary/native>
+     https://github.com/ContainerSolutions/k8s-deployment-strategies/tree/master/canary/native
 
 Else, here is the instruction
 
-Your should show still have the digitocr-service-v1 deployed, 2 replicas.  Confirm that by
+Your should show still have the digitocr-service-v1 deployed, 2 replicas.  Confirm that by 
      $ kubectl get deployment
 
      else 
@@ -107,3 +109,4 @@ Now access the webpage, repeat a few times and see how often you get Ver1, how o
           $ kubectl delete deployment digitocr-service-v1
 
 # Recap
+

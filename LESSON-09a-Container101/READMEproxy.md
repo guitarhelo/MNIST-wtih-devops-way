@@ -1,8 +1,6 @@
-# Proxy Server
-
 This configures the docker daemen to use proxy server
 
-You can follow instrcutions here  <https://docs.docker.com/config/daemon/systemd/>
+You can follow instrcutions here  https://docs.docker.com/config/daemon/systemd/
 
 Or simplified steps here
 
@@ -25,3 +23,4 @@ Confirm it is reloaded
     $ systemctl show --property=Environment docker
 
 All done
+

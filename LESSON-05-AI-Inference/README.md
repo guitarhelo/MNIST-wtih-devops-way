@@ -1,4 +1,3 @@
-
 # Deploy the trained model
 
 Obj - Don't retrain. Just call out saved model and deploy it.
@@ -99,6 +98,7 @@ First layer is a 28 x 28 = 784
 First hidden layer is 32 nureons
 Second hidden layer is 16 nureons
 
+
 ## Step 2
 
 Now let's put in some data to run the prediction
@@ -156,7 +156,6 @@ Now let's put in some data to run the prediction
 ## Step 3
 
 Now you need to refer to your previous codes
-
 * Get the predicitons
 * Plot the predictions to see if it is correct
 * This is to confirm the model is indeed deployed correctly
@@ -218,6 +217,7 @@ CHEAT.  That's the answer below if you run out of time
     plot_value_array(i, new_prediction,  y_test)
     plt.show()
 
+
 ## Step 4
 
 You can manually edit the input data.  To see how the interference change.  Just to be convinved the model is working correct.
@@ -225,8 +225,8 @@ You can manually edit the input data.  To see how the interference change.  Just
 
 # Recap
 
-* How to load a model
-* We studied the structure of the model, and confirmed our understanding of ANN
-* We have standlone code that can OCR a handwritting represented by a 28x28 input matrix.
++ How to load a model
++ We studied the structure of the model, and confirmed our understanding of ANN
++ We have standlone code that can OCR a handwritting represented by a 28x28 input matrix.
 
 What would be our next step?

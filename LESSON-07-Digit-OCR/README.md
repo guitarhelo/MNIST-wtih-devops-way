@@ -1,4 +1,3 @@
-
 # Putting everything together
 
 ## Concept
@@ -31,3 +30,4 @@ Basically, instead of just call out a 'display picture' html, the app need to ru
 The code is at 'app.py'
 
 # Recap
+

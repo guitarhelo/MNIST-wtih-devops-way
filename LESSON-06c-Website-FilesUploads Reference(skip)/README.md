@@ -19,3 +19,5 @@ Let's walk through and see what happens
     $ python3 app_display_image.py
 
 Again, let's see how is the parameters passed
+
+

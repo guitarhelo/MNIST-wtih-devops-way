@@ -1,7 +1,6 @@
-
 # AI - with Tensorflow
 
-# Jupyter Notebook
+## Jupyter Notebook
 
 Basic Jupyter Notebook Practice.  
 
@@ -105,16 +104,16 @@ Add this on top, same place as the 'import tensorflow'
 
     import matplotlib.pyplot as plt 
 
+
 ## Step 2
 
 Now... let's switch gear for a moment.
 
-Q: Are the codes Python codes?
+Q: Are the codes Python codes? 
 
 Q: Would it work on the Linux machine we were using earlier?
 
 A: Let's export the code and put it there to try!
-
 * Export the .py code
 * Copy into the Ubuntu
 * Try to run it
@@ -128,6 +127,7 @@ A: Let's export the code and put it there to try!
     $ sudo apt install python3-pip
 
 * This is a good point to have a break when the system installs
+
 
 Now.  All able to run the code?
 
@@ -165,7 +165,6 @@ We will study the dataset more to ensure we understand what is happening
     plt.show()
 
 ## Step 4
-
 So the training data is all good
 Let's go into building the NN, and training it
 
@@ -225,6 +224,7 @@ Let's see how accurate is the model
     ##  Run through the test dataset.  The prediction is output to the variable 'predictions'
     predictions = model.predict(X_test_scale)
 
+
 ## Step 5
 
 Let's study the classifications. We will try to plot it out.  Again, will use a library, so add this to the improts
@@ -280,19 +280,20 @@ Now, add the following codes
 
     plt.show()
 
-Spend some time to understand the above model.  And the plots.
 
+Spend some time to understand the above model.  And the plots.
 * First Box.
-  * From picture, what is the digit?
-  * What the NN classified it as?
-  * What is the Tagged data?
-  * Did the NN classify it correctly?
+    * From picture, what is the digit?
+    * What the NN classified it as?
+    * What is the Tagged data?
+    * Did the NN classify it correctly?
 
 * Look at box index 2004 (top row, 5th from left)
-  * From picture, what is the digit?
-  * What the NN classified it as?
-  * What is the Tagged data?
-  * Did the NN classify it correctly?
+    * From picture, what is the digit?
+    * What the NN classified it as?
+    * What is the Tagged data?
+    * Did the NN classify it correctly?
+
 
 Let's get into the details of couple of the classification.  Put these codes
 
@@ -330,6 +331,7 @@ Action : Go and play around with the model.
 
     * Try to make it more accurate
     * How does the training accuracy changes, vs the actual test accuracy?
+
 
 ## Step 6
 

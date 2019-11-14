@@ -1,4 +1,4 @@
-# Git
+#  Git
 
 One popular Version Control System
 
@@ -15,15 +15,16 @@ So we want these files on the Windows machine for reference.
 
 **DO NOT** copy the file over to the Ubuntu machine
 
-[ACTION]
 
+[ACTION]
+    
     Open command line
 
     > git
     > git version
 
-If you see something, it is working.  Else please install from
-
+If you see something, it is working.  Else please install from 
+      
     https://git-scm.com/download/win
 
 Note. We purposely don't install the Github version.  Just to show, it does the SAME thing.
@@ -50,6 +51,7 @@ Now you have a copy in your company that you can work on.
 
     > git fetch https://github.com/LMWCoding/fun-with-devops.git master
 
+
 ## Creating your own project etc
 
 Using it locally first
@@ -59,6 +61,7 @@ Using it locally first
 In the directory you are storing source code (or just create a new blank directory)
 
     > git init
+
 
 To check the status
 
@@ -84,6 +87,7 @@ If you are at masters, and want to create a branch under masters, just do a chec
 
     > git checkout -b new-branch-name
 
+
 ## Github
 
 ### Step 4 - Create GitHub Account
@@ -103,6 +107,7 @@ you would get the name in the Github UI that you created the repository
 You would be prompt to log in
 
 Note : Think of the 'origin' as the alias to refer to the remote repository.
+
 
 ### Step 6 - Subsequent Push / Branch
 

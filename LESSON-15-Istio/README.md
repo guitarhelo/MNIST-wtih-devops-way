@@ -4,7 +4,8 @@
 
 ### Step 1 - Create New cluster
 
-<https://blogs.vmware.com/cloudnative/2019/03/12/integrating-istio-vmware-enterprise-pks/>
+https://blogs.vmware.com/cloudnative/2019/03/12/integrating-istio-vmware-enterprise-pks/
+
 
 Here is summary of the steps
 Creat Netowrk Profile file, call it "network-profile-medium.json"
@@ -34,11 +35,12 @@ Check the cluster is working
 
 ### Step 2- Now download and install Istio
 
-Download the Istio bits and add its binary location to the PATH variable. Execute the following command to download Istio:
+Download the Istio bits and add its binary location to the PATH variable. Execute the following command to download Istio: 
 
     $ sudo curl -L https://git.io/getLatestIstio | sh -
 
-See <https://istio.io/docs/setup/kubernetes/install/> to add Istio to your Kubernetes cluster.
+
+See https://istio.io/docs/setup/kubernetes/install/ to add Istio to your Kubernetes cluster.
 
 To configure the istioctl client tool for your workstation,
 add the /home/trainee/istio-1.3.2/bin directory to your environment path variable with:
@@ -67,7 +69,7 @@ Checking
 
 Must use the namespace that has istio-injection=enabled
 
-Option 1)  Change existing default
+Option 1)  Change existing default 
 
     $ kubectl label namespace default istio-injection=enabled
 
@@ -94,3 +96,4 @@ Option 2) Create new namespace
     $ kubectl config use-context trainingistio
 
     $ kubectl create -n <namespace> -f <your-app-spec>.yaml
+    
