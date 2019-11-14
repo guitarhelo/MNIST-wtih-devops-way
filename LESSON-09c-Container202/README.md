@@ -9,7 +9,6 @@ On the ubuntu
 
     cd to the directory
 
-
 ## Step 1  Write some Python codes that you want to deploy
 
 Create a file named 'app.py', with following contents
@@ -35,7 +34,8 @@ Create a file named 'app.py', with following contents
         app.run(host='0.0.0.0', port=80)
 
 You can try to run the code.  Error?  Hint
-* because of venv, 
+
+* because of venv,
 * maybe need to sudo (due to port 80)
 
 Use a chrome to point to check that it works
@@ -66,12 +66,12 @@ Creat a file named <code>Dockerfile</code> with the follow content
     # Run app.py when the container launches
     CMD ["python", "app.py"]
 
-
 Create a file named <code>requirements.txt</code>, with the following content
 
     Flask
 
 Check that you have the  files in the directory
+
 * Dockerfile
 * app.py
 * flask
@@ -85,7 +85,6 @@ Let's pause to understand what we are doing.
 See the response, does it match your Dockerfile?
 
     $ docker image ls
-
 
 ## Step 4 Now run the container
 

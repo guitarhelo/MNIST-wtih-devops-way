@@ -6,14 +6,12 @@ Target is to split the code into two parts, with the OCR part acting as a micros
 
   The api definition
   
-
-*  Endpoint : http://url/api
-*  Method : POST
-*  Content : Multi-part form
+* Endpoint : <http://url/api>
+* Method : POST
+* Content : Multi-part form
           name: image
           content : the .jpg file
-*  Expect reponse format :
-
+* Expect reponse format :
 
      {
           "message": "File successfully uploaded",

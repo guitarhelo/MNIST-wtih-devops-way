@@ -43,6 +43,7 @@ Create a file named 'index.html', with following contents
     </html>
 
 Check that you have the 2 files in the directory
+
 * Dockerfile
 * index.html
 
@@ -63,5 +64,3 @@ Notice the new images there.  Also the Ubuntu 18.04 image.
     $ docker run -p 4000:80 -d fsecondcontainer
 
 Check it out at the browser
-
-
