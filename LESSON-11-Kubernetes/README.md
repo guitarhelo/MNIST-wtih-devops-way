@@ -42,7 +42,7 @@ The registry each site would use is
 
 | Location  | Container Registory   |   Username      |  Password
 | --- | --- |  ---  |  --- |
-| Beijing   |                       |
+| Beijing   | harbor.csc01.bjcsc.com | admin | P@ssw0rd |
 | Shanghai  |                       |
 | Singapore | harbor.csc-dell.com   | trainee01        | ********** |
 |  Sydney   |                       |
@@ -54,7 +54,7 @@ The registry each site would use is
 
 Because it is a private registry, and we didn't use a publicly signed key, we need this step to put the key in
 
-    Copy the  ca.crt from your home directory to 
+    Copy the  ca.crt from your home directory to
     /etc/docker/certs.d/harbor.csc-dell.com/ca.crt
 
 Login docker to registry (harbour)
@@ -262,4 +262,4 @@ How to extract IP/Ports for exposing service. Scripting
     export NODE_PORT=$(kubectl get svc -n default cscnginx -o jsonpath='{.spec.ports[0].nodePort}')
     export NODE_IP=$(kubectl get no -o jsonpath="{.items[0].status.addresses[0].address}")
     export APP_URL=http://$NODE_IP:$NODE_PORT/
-    echo $APP_URL 
+    echo $APP_URL
