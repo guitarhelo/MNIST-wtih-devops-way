@@ -1,10 +1,10 @@
 # Fun with Dev Ops
 
-Lee Man Wei
+John.Pan
 
 ---
 
-APJC CSC Ignite 2019
+APJC CSC Ignite 2020
 
 ---
 
